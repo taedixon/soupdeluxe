@@ -1,4 +1,4 @@
-package ca.noxid.soupdeluxe;
+package ca.noxid.soupdeluxe.item;
 
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
@@ -6,15 +6,7 @@ import net.minecraft.item.ItemGroup;
 
 public class SoupItem {
 	public static Item TestSoup() {
-		final Item.Properties prop = new Item.Properties()
-				.tab(ItemGroup.TAB_FOOD)
-				.stacksTo(64)
-				.food(new Food.Builder()
-						.nutrition(8)
-						.saturationMod(1f)
-						.build()
-				);
-		return new Item(prop).setRegistryName("test_soup");
+		return new TestSoup();
 	}
 
 	public static Item BoneBroth() {

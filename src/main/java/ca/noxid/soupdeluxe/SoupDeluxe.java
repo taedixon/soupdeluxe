@@ -1,10 +1,15 @@
 package ca.noxid.soupdeluxe;
 
+import ca.noxid.soupdeluxe.effect.EnchantEffects;
+import ca.noxid.soupdeluxe.effect.SilkTouchEffect;
+import ca.noxid.soupdeluxe.item.SoupItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
+import net.minecraft.potion.Effect;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -73,7 +78,10 @@ public class SoupDeluxe
 		LOGGER.info("HELLO from server starting");
 	}
 
-
+	@SubscribeEvent
+	public void onBlockBreak(BlockEvent.BreakEvent eve) {
+		LOGGER.info("Block was broek");
+	}
 
 	// You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
 	// Event bus for receiving Registry Events)
@@ -90,6 +98,11 @@ public class SoupDeluxe
 			eve.getRegistry().register(SoupItem.TestSoup());
 			eve.getRegistry().register(SoupItem.BoneBroth());
 			eve.getRegistry().register(SoupItem.VegeBroth());
+		}
+
+		@SubscribeEvent
+		public static void onRegisterEffects(final RegistryEvent.Register<Effect> eve) {
+			eve.getRegistry().register(EnchantEffects.SILK_TOUCH);
 		}
 	}
 }
