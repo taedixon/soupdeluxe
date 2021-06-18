@@ -130,6 +130,11 @@ public class SoupDeluxe
 			eve.getRegistry().register(SoupItem.TestSoup());
 			eve.getRegistry().register(SoupItem.BoneBroth());
 			eve.getRegistry().register(SoupItem.VegeBroth());
+			eve.getRegistry().register(SoupItem.CarrotCream());
+			eve.getRegistry().register(SoupItem.Pottage());
+			eve.getRegistry().register(SoupItem.Consomme());
+			eve.getRegistry().register(SoupItem.SimpleStew());
+			eve.getRegistry().register(SoupItem.Borscht());
 		}
 
 		@SubscribeEvent

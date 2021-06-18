@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:bone_broth"},
+    {"item": "minecraft:egg"},
+    {"tag": "soupdeluxe:raw_meat"},
+    {"item": "minecraft:carrot"},
+    {"item": "minecraft:paper"}
+  ],
+  "result": {
+    "item": "soupdeluxe:consomme"
+  }
+}

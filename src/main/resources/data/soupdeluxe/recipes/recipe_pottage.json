@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:veg_broth"},
+    {"item": "minecraft:wheat"},
+    {"item": "minecraft:wheat"},
+    {"item": "minecraft:wheat"},
+    {"item": "minecraft:wheat"}
+  ],
+  "result": {
+    "item": "soupdeluxe:pottage"
+  }
+}

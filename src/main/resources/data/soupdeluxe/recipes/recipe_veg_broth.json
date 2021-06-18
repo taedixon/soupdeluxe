@@ -1,6 +1,5 @@
 {
   "type": "minecraft:crafting_shapeless",
-  "group": "",
   "ingredients": [
     {"item": "minecraft:bowl"},
     {"item": "minecraft:water_bucket"},

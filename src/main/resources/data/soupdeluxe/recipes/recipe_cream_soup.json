@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:veg_broth"},
+    {"item": "minecraft:milk_bucket"}
+  ],
+  "result": {
+    "item": "soupdeluxe:cream_soup"
+  }
+}

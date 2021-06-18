@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:bone_broth"},
+    {"item": "minecraft:potato"},
+    {"item": "minecraft:potato"},
+    {"tag": "soupdeluxe:raw_meat"},
+    {"tag": "soupdeluxe:raw_meat"}
+  ],
+  "result": {
+    "item": "soupdeluxe:simple_stew"
+  }
+}
