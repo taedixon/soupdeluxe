@@ -1,0 +1,16 @@
+{
+  "type": "soupdeluxe:loot_soup_fortune",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "effects": {
+          "soupdeluxe:effect_lucky_soup": {
+            "ambient": false
+          }
+        }
+      }
+    }
+  ]
+}

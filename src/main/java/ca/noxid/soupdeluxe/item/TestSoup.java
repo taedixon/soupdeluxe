@@ -22,7 +22,8 @@ public class TestSoup extends Item {
 						.saturationMod(1f)
 						.effect(new TestSoupEffectProvider(0), 1f)
 						.effect(new TestSoupEffectProvider(1), 1f)
-						.effect(new TestSoupEffectProvider(2), 1f)
+						//.effect(new TestSoupEffectProvider(2), 1f)
+						.effect(new TestSoupEffectProvider(3), 1f)
 						.build()
 				));
 		setRegistryName("test_soup");
@@ -39,6 +40,7 @@ public class TestSoup extends Item {
 					Effects.MOVEMENT_SPEED,
 					Effects.DAMAGE_RESISTANCE,
 					EnchantEffects.SILK_TOUCH,
+					EnchantEffects.LUCKY_SOUP
 			};
 			return new EffectInstance(effects[fx], 2500, 1);
 		}

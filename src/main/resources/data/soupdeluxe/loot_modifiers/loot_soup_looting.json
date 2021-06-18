@@ -1,0 +1,19 @@
+{
+  "type": "soupdeluxe:loot_soup_looting",
+  "conditions": [
+    {
+      "condition": "minecraft:killed_by_player"
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "killer_player",
+      "predicate": {
+        "effects": {
+          "soupdeluxe:effect_lucky_soup": {
+            "ambient": false
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,15 +1,17 @@
 package ca.noxid.soupdeluxe;
 
 import ca.noxid.soupdeluxe.effect.EnchantEffects;
-import ca.noxid.soupdeluxe.effect.SilkTouchEffect;
+import ca.noxid.soupdeluxe.loot.SoupFortuneModifier;
+import ca.noxid.soupdeluxe.loot.SilkTouchModifier;
 import ca.noxid.soupdeluxe.item.SoupItem;
+import ca.noxid.soupdeluxe.loot.SoupLootingModifier;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.item.Item;
 import net.minecraft.potion.Effect;
 import net.minecraftforge.common.MinecraftForge;
+import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
-import net.minecraftforge.event.world.BlockEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -78,11 +80,6 @@ public class SoupDeluxe
 		LOGGER.info("HELLO from server starting");
 	}
 
-	@SubscribeEvent
-	public void onBlockBreak(BlockEvent.BreakEvent eve) {
-		LOGGER.info("Block was broek");
-	}
-
 	// You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
 	// Event bus for receiving Registry Events)
 	@Mod.EventBusSubscriber(bus=Mod.EventBusSubscriber.Bus.MOD)
@@ -103,6 +100,14 @@ public class SoupDeluxe
 		@SubscribeEvent
 		public static void onRegisterEffects(final RegistryEvent.Register<Effect> eve) {
 			eve.getRegistry().register(EnchantEffects.SILK_TOUCH);
+			eve.getRegistry().register(EnchantEffects.LUCKY_SOUP);
+		}
+
+		@SubscribeEvent
+		public static void onRegisterLootModifiers(final RegistryEvent.Register<GlobalLootModifierSerializer<?>> eve) {
+			eve.getRegistry().register(new SilkTouchModifier.Serializer().setRegistryName("loot_silk_soup"));
+			eve.getRegistry().register(new SoupFortuneModifier.Serializer().setRegistryName("loot_soup_fortune"));
+			eve.getRegistry().register(new SoupLootingModifier.Serializer().setRegistryName("loot_soup_looting"));
 		}
 	}
 }

@@ -4,4 +4,5 @@ import net.minecraft.potion.Effect;
 
 public class EnchantEffects {
 	public static final Effect SILK_TOUCH = new SilkTouchEffect();
+	public static final Effect LUCKY_SOUP = new LuckySoupEffect();
 }

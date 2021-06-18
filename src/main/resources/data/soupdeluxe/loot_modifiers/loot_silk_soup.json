@@ -1,0 +1,16 @@
+{
+  "type": "soupdeluxe:loot_silk_soup",
+  "conditions": [
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "effects": {
+          "soupdeluxe:effect_silk_touch": {
+            "ambient": false
+          }
+        }
+      }
+    }
+  ]
+}

@@ -1,6 +1,8 @@
 {
   "replace": false,
   "entries": [
-    "soupdeluxe:silk_soup"
+    "soupdeluxe:loot_silk_soup",
+    "soupdeluxe:loot_soup_fortune",
+    "soupdeluxe:loot_soup_looting"
   ]
 }
