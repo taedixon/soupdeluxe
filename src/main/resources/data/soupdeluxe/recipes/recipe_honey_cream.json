@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:cream_soup"},
+    {"item": "minecraft:honey_bottle"},
+    {"item": "minecraft:honey_bottle"},
+    {"item": "minecraft:honey_bottle"},
+    {"item": "minecraft:carrot"}
+  ],
+  "result": {
+    "item": "soupdeluxe:honey_cream"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:simple_stew"},
+    {"item": "minecraft:golden_carrot"},
+    {"item": "minecraft:golden_carrot"},
+    {"item": "minecraft:rabbit"},
+    {"item": "minecraft:rabbit"}
+  ],
+  "result": {
+    "item": "soupdeluxe:lucky_stew"
+  }
+}

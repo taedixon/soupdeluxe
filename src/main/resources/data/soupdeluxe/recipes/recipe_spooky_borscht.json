@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:borscht"},
+    {"item": "minecraft:fermented_spider_eye"},
+    {"item": "minecraft:fermented_spider_eye"},
+    {"item": "minecraft:honey_bottle"},
+    {"item": "minecraft:honey_bottle"}
+  ],
+  "result": {
+    "item": "soupdeluxe:spooky_borscht"
+  }
+}

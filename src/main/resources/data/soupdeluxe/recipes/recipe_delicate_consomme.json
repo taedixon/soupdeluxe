@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:consomme"},
+    {"tag": "minecraft:small_flowers"},
+    {"tag": "minecraft:small_flowers"},
+    {"tag": "minecraft:small_flowers"},
+    {"tag": "minecraft:small_flowers"}
+  ],
+  "result": {
+    "item": "soupdeluxe:delicate_consomme"
+  }
+}

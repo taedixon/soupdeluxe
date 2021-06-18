@@ -128,13 +128,26 @@ public class SoupDeluxe
 		public static void onRegisterItems(final RegistryEvent.Register<Item> eve) {
 			LOGGER.info("Registering soup...");
 			eve.getRegistry().register(SoupItem.TestSoup());
+
 			eve.getRegistry().register(SoupItem.BoneBroth());
 			eve.getRegistry().register(SoupItem.VegeBroth());
+
 			eve.getRegistry().register(SoupItem.CarrotCream());
 			eve.getRegistry().register(SoupItem.Pottage());
 			eve.getRegistry().register(SoupItem.Consomme());
 			eve.getRegistry().register(SoupItem.SimpleStew());
 			eve.getRegistry().register(SoupItem.Borscht());
+
+			eve.getRegistry().register(SoupItem.DeluxeBorscht());
+			eve.getRegistry().register(SoupItem.SpookyBorscht());
+			eve.getRegistry().register(SoupItem.RichStew());
+			eve.getRegistry().register(SoupItem.LuckyStew());
+			eve.getRegistry().register(SoupItem.DelicateConsomme());
+			eve.getRegistry().register(SoupItem.ExoticConsomme());
+			eve.getRegistry().register(SoupItem.Chottage());
+			eve.getRegistry().register(SoupItem.FancyPottage());
+			eve.getRegistry().register(SoupItem.HoneyCream());
+			eve.getRegistry().register(SoupItem.FishChowder());
 		}
 
 		@SubscribeEvent

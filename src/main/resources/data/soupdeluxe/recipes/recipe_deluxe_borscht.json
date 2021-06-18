@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:borscht"},
+    {"item": "minecraft:carrot"},
+    {"item": "minecraft:carrot"},
+    {"item": "minecraft:pumpkin"},
+    {"item": "minecraft:pumpkin"}
+  ],
+  "result": {
+    "item": "soupdeluxe:deluxe_borscht"
+  }
+}

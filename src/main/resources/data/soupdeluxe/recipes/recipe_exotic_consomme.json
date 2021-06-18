@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:consomme"},
+    {"item": "minecraft:crimson_fungus"},
+    {"item": "minecraft:crimson_fungus"},
+    {"item": "minecraft:warped_fungus"},
+    {"item": "minecraft:warped_fungus"}
+  ],
+  "result": {
+    "item": "soupdeluxe:exotic_consomme"
+  }
+}

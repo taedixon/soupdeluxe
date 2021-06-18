@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:pottage"},
+    {"item": "minecraft:chorus_fruit"},
+    {"item": "minecraft:chorus_fruit"},
+    {"item": "minecraft:chorus_fruit"},
+    {"item": "minecraft:chorus_fruit"}
+  ],
+  "result": {
+    "item": "soupdeluxe:chottage"
+  }
+}

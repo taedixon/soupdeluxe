@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:pottage"},
+    {"item": "minecraft:sweet_berries"},
+    {"item": "minecraft:sweet_berries"},
+    {"item": "minecraft:sweet_berries"},
+    {"item": "minecraft:sweet_berries"}
+  ],
+  "result": {
+    "item": "soupdeluxe:fancy_pottage"
+  }
+}

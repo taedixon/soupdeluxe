@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:cream_soup"},
+    {"tag": "minecraft:fishes"},
+    {"tag": "minecraft:fishes"},
+    {"item": "minecraft:potato"},
+    {"item": "minecraft:potato"}
+  ],
+  "result": {
+    "item": "soupdeluxe:fish_chowder"
+  }
+}

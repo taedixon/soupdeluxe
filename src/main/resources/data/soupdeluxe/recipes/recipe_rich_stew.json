@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:simple_stew"},
+    {"item": "minecraft:carrot"},
+    {"item": "minecraft:carrot"},
+    [
+      {"item": "minecraft:brown_mushroom"},
+      {"item": "minecraft:red_mushroom"}
+    ],
+    [
+      {"item": "minecraft:brown_mushroom"},
+      {"item": "minecraft:red_mushroom"}
+    ]
+  ],
+  "result": {
+    "item": "soupdeluxe:rich_stew"
+  }
+}
