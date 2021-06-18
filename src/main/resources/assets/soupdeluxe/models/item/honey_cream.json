@@ -2,6 +2,6 @@
 
   "parent": "item/generated",
   "textures": {
-    "layer0": "soupdeluxe:item/cream_soup_icon_plus"
+    "layer0": "soupdeluxe:item/honey_cream_icon"
   }
 }

@@ -2,6 +2,6 @@
 
   "parent": "item/generated",
   "textures": {
-    "layer0": "soupdeluxe:item/consomme_icon_plus"
+    "layer0": "soupdeluxe:item/exotic_consomme_icon"
   }
 }

@@ -2,6 +2,6 @@
 
   "parent": "item/generated",
   "textures": {
-    "layer0": "soupdeluxe:item/borscht_icon_plus"
+    "layer0": "soupdeluxe:item/spooky_borscht_icon"
   }
 }

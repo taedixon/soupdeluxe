@@ -2,6 +2,6 @@
 
   "parent": "item/generated",
   "textures": {
-    "layer0": "soupdeluxe:item/pottage_icon_plus"
+    "layer0": "soupdeluxe:item/fancy_pottage_icon"
   }
 }

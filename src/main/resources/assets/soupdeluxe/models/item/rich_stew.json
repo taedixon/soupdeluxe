@@ -2,6 +2,6 @@
 
   "parent": "item/generated",
   "textures": {
-    "layer0": "soupdeluxe:item/simple_stew_icon_plus"
+    "layer0": "soupdeluxe:item/rich_stew_icon"
   }
 }
