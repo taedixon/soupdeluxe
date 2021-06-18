@@ -1,6 +1,6 @@
 package ca.noxid.soupdeluxe.loot;
 
-import ca.noxid.soupdeluxe.effect.EnchantEffects;
+import ca.noxid.soupdeluxe.effect.SoupEffects;
 import com.google.gson.JsonObject;
 import net.minecraft.block.BlockState;
 import net.minecraft.enchantment.EnchantmentHelper;
@@ -46,7 +46,7 @@ public class SoupFortuneModifier extends LootModifier {
 			if (ctxTool != null && holder instanceof PlayerEntity) {
 				PlayerEntity pHolder = (PlayerEntity) holder;
 				int toolFortune = EnchantmentHelper.getEnchantments(ctxTool).getOrDefault(Enchantments.BLOCK_FORTUNE, -1);
-				EffectInstance soupEffect = pHolder.getEffect(EnchantEffects.LUCKY_SOUP);
+				EffectInstance soupEffect = pHolder.getEffect(SoupEffects.LUCKY_SOUP);
 				int soupLevel = -1;
 				if (soupEffect != null) {
 					soupLevel = soupEffect.getAmplifier() + 1;

@@ -1,14 +1,17 @@
 package ca.noxid.soupdeluxe;
 
-import ca.noxid.soupdeluxe.effect.EnchantEffects;
+import ca.noxid.soupdeluxe.effect.SoupEffects;
 import ca.noxid.soupdeluxe.loot.SoupFortuneModifier;
 import ca.noxid.soupdeluxe.loot.SilkTouchModifier;
 import ca.noxid.soupdeluxe.item.SoupItem;
 import ca.noxid.soupdeluxe.loot.SoupLootingModifier;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
+import net.minecraft.item.Items;
 import net.minecraft.potion.Effect;
+import net.minecraftforge.client.event.FOVUpdateEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
@@ -79,6 +82,38 @@ public class SoupDeluxe
 		// do something when the server starts
 		LOGGER.info("HELLO from server starting");
 	}
+	/**
+	 * Cancel the FOV decrease caused by the decreasing speed due to player penalties.
+	 * Original FOV value given by the event is never used, we start from scratch 1.0F value.
+	 * Edited from AbstractClientPlayer.getFovModifier()
+	 * @param event
+	 */
+	//@SubscribeEvent
+	public void onFOVUpdate(FOVUpdateEvent event) {
+		//LOGGER.info("FOV update");
+		PlayerEntity player = event.getEntity();
+		if (player.getActiveEffects().stream().anyMatch((e) -> e.getEffect() == SoupEffects.SEA_SOUP)) {
+			//LOGGER.info("Recalculating for soup");
+			float f = 1.0F;
+
+			if (player.abilities.flying) {
+				f *= 1.1F;
+			}
+
+			if (player.isUsingItem() && player.getUseItem().getItem() == Items.BOW) {
+				int i = player.getTicksUsingItem();
+				float f1 = (float)i / 20.0F;
+				if (f1 > 1.0F) {
+					f1 = 1.0F;
+				} else {
+					f1 = f1 * f1;
+				}
+
+				f *= 1.0F - f1 * 0.15F;
+			}
+			event.setNewfov(f);
+		}
+	}
 
 	// You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
 	// Event bus for receiving Registry Events)
@@ -99,8 +134,9 @@ public class SoupDeluxe
 
 		@SubscribeEvent
 		public static void onRegisterEffects(final RegistryEvent.Register<Effect> eve) {
-			eve.getRegistry().register(EnchantEffects.SILK_TOUCH);
-			eve.getRegistry().register(EnchantEffects.LUCKY_SOUP);
+			eve.getRegistry().register(SoupEffects.SILK_TOUCH);
+			eve.getRegistry().register(SoupEffects.LUCKY_SOUP);
+			eve.getRegistry().register(SoupEffects.SEA_SOUP);
 		}
 
 		@SubscribeEvent

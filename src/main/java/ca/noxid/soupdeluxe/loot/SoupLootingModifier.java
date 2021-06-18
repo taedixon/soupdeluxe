@@ -1,12 +1,9 @@
 package ca.noxid.soupdeluxe.loot;
 
-import ca.noxid.soupdeluxe.effect.EnchantEffects;
+import ca.noxid.soupdeluxe.effect.SoupEffects;
 import com.google.gson.JsonObject;
-import net.minecraft.block.BlockState;
-import net.minecraft.enchantment.EnchantmentHelper;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.entity.Entity;
-import net.minecraft.entity.EntityType;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.MobEntity;
 import net.minecraft.entity.player.PlayerEntity;
@@ -16,9 +13,7 @@ import net.minecraft.loot.LootParameterSets;
 import net.minecraft.loot.LootParameters;
 import net.minecraft.loot.LootTable;
 import net.minecraft.loot.conditions.ILootCondition;
-import net.minecraft.nbt.CompoundNBT;
 import net.minecraft.potion.EffectInstance;
-import net.minecraft.util.DamageSource;
 import net.minecraft.util.Hand;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
@@ -52,7 +47,7 @@ public class SoupLootingModifier extends LootModifier {
 		LOGGER.info(pKiller);
 		if (pKiller != null && killed instanceof MobEntity) {
 			int toolLooting = context.getLootingModifier();
-			EffectInstance soupEffect = pKiller.getEffect(EnchantEffects.LUCKY_SOUP);
+			EffectInstance soupEffect = pKiller.getEffect(SoupEffects.LUCKY_SOUP);
 			int soupLevel = -1;
 			if (soupEffect != null) {
 				soupLevel = soupEffect.getAmplifier() + 1;

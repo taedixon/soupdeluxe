@@ -1,7 +1,6 @@
 package ca.noxid.soupdeluxe.item;
 
-import ca.noxid.soupdeluxe.effect.EnchantEffects;
-import ca.noxid.soupdeluxe.effect.SilkTouchEffect;
+import ca.noxid.soupdeluxe.effect.SoupEffects;
 import net.minecraft.item.Food;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
@@ -20,10 +19,11 @@ public class TestSoup extends Item {
 						.nutrition(8)
 						.alwaysEat()
 						.saturationMod(1f)
-						.effect(new TestSoupEffectProvider(0), 1f)
-						.effect(new TestSoupEffectProvider(1), 1f)
+						//.effect(new TestSoupEffectProvider(0), 1f)
+						//.effect(new TestSoupEffectProvider(1), 1f)
 						//.effect(new TestSoupEffectProvider(2), 1f)
-						.effect(new TestSoupEffectProvider(3), 1f)
+						//.effect(new TestSoupEffectProvider(3), 1f)
+						.effect(new TestSoupEffectProvider(4), 1f)
 						.build()
 				));
 		setRegistryName("test_soup");
@@ -39,8 +39,9 @@ public class TestSoup extends Item {
 			final Effect[] effects = {
 					Effects.MOVEMENT_SPEED,
 					Effects.DAMAGE_RESISTANCE,
-					EnchantEffects.SILK_TOUCH,
-					EnchantEffects.LUCKY_SOUP
+					SoupEffects.SILK_TOUCH,
+					SoupEffects.LUCKY_SOUP,
+					SoupEffects.SEA_SOUP
 			};
 			return new EffectInstance(effects[fx], 2500, 1);
 		}
