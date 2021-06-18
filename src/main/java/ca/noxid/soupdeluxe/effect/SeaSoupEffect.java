@@ -40,6 +40,7 @@ public class SeaSoupEffect extends Effect {
 		if (speedAttrib != null) {
 			speedAttrib.removeModifier(modUUID);
 			if (!effectOver && ent.isInWater()) {
+				ent.setAirSupply(Math.min(ent.getMaxAirSupply(), ent.getAirSupply() + 3 + amplifier));
 				final AttributeModifier mod = new AttributeModifier(modUUID,
 						"Soup swimming boost",
 						1.5 + amplifier * 0.5,
