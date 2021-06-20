@@ -8,11 +8,8 @@ import ca.noxid.soupdeluxe.item.SoupItems;
 import ca.noxid.soupdeluxe.loot.SoupLootingModifier;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
-import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
-import net.minecraft.item.Items;
 import net.minecraft.potion.Effect;
-import net.minecraftforge.client.event.FOVUpdateEvent;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
@@ -117,7 +114,9 @@ public class SoupDeluxe
 			eve.getRegistry().register(SoupItems.FancyPottage);
 			eve.getRegistry().register(SoupItems.HoneyCream);
 			eve.getRegistry().register(SoupItems.FishChowder);
+
 			eve.getRegistry().register(SoupItems.DolphinTail);
+			eve.getRegistry().register(SoupItems.DolphinSoup);
 		}
 
 		@SubscribeEvent
@@ -125,6 +124,7 @@ public class SoupDeluxe
 			eve.getRegistry().register(SoupEffects.SILK_TOUCH);
 			eve.getRegistry().register(SoupEffects.LUCKY_SOUP);
 			eve.getRegistry().register(SoupEffects.SEA_SOUP);
+			eve.getRegistry().register(SoupEffects.DOLPHIN_SOUP);
 		}
 
 		@SubscribeEvent

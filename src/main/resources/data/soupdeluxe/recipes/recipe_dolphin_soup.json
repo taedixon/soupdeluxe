@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "ingredients": [
+    {"item": "soupdeluxe:cream_soup"},
+    {"item": "soupdeluxe:dolphin_tail"},
+    {"item": "minecraft:salmon"},
+    {"item": "minecraft:potato"},
+    {"item": "minecraft:potato"}
+  ],
+  "result": {
+    "item": "soupdeluxe:dolphin_soup"
+  }
+}

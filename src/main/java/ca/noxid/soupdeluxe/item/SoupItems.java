@@ -18,6 +18,16 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_MISC)
 			.stacksTo(64)).setRegistryName("dolphin_tail");
 
+	public static Item DolphinSoup = new Item(
+			new Item.Properties()
+			.tab(ItemGroup.TAB_FOOD)
+			.food(new Food.Builder()
+					.nutrition(4)
+					.saturationMod(1f)
+					.effect(new SoupEffectProvider(SoupEffects.DOLPHIN_SOUP),1f)
+					.build())
+			.stacksTo(16)).setRegistryName("dolphin_soup");
+
 	public static Item BoneBroth = new Item(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
