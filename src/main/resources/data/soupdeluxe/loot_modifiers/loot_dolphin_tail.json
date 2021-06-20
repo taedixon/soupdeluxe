@@ -1,0 +1,20 @@
+{
+  "type": "soupdeluxe:loot_dolphin_tail",
+  "conditions": [
+    {
+      "condition": "minecraft:killed_by_player"
+    },
+    {
+      "condition": "minecraft:random_chance_with_looting",
+      "chance": 0.5,
+      "looting_multiplier": 0.1
+    },
+    {
+      "condition": "minecraft:entity_properties",
+      "entity": "this",
+      "predicate": {
+        "type": "minecraft:dolphin"
+      }
+    }
+  ]
+}

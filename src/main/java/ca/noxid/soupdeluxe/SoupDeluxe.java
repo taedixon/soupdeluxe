@@ -1,9 +1,10 @@
 package ca.noxid.soupdeluxe;
 
 import ca.noxid.soupdeluxe.effect.SoupEffects;
+import ca.noxid.soupdeluxe.loot.DolphinTailModifier;
 import ca.noxid.soupdeluxe.loot.SoupFortuneModifier;
 import ca.noxid.soupdeluxe.loot.SilkTouchModifier;
-import ca.noxid.soupdeluxe.item.SoupItem;
+import ca.noxid.soupdeluxe.item.SoupItems;
 import ca.noxid.soupdeluxe.loot.SoupLootingModifier;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
@@ -82,38 +83,6 @@ public class SoupDeluxe
 		// do something when the server starts
 		LOGGER.info("HELLO from server starting");
 	}
-	/**
-	 * Cancel the FOV decrease caused by the decreasing speed due to player penalties.
-	 * Original FOV value given by the event is never used, we start from scratch 1.0F value.
-	 * Edited from AbstractClientPlayer.getFovModifier()
-	 * @param event
-	 */
-	//@SubscribeEvent
-	public void onFOVUpdate(FOVUpdateEvent event) {
-		//LOGGER.info("FOV update");
-		PlayerEntity player = event.getEntity();
-		if (player.getActiveEffects().stream().anyMatch((e) -> e.getEffect() == SoupEffects.SEA_SOUP)) {
-			//LOGGER.info("Recalculating for soup");
-			float f = 1.0F;
-
-			if (player.abilities.flying) {
-				f *= 1.1F;
-			}
-
-			if (player.isUsingItem() && player.getUseItem().getItem() == Items.BOW) {
-				int i = player.getTicksUsingItem();
-				float f1 = (float)i / 20.0F;
-				if (f1 > 1.0F) {
-					f1 = 1.0F;
-				} else {
-					f1 = f1 * f1;
-				}
-
-				f *= 1.0F - f1 * 0.15F;
-			}
-			event.setNewfov(f);
-		}
-	}
 
 	// You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD
 	// Event bus for receiving Registry Events)
@@ -127,27 +96,28 @@ public class SoupDeluxe
 		@SubscribeEvent
 		public static void onRegisterItems(final RegistryEvent.Register<Item> eve) {
 			LOGGER.info("Registering soup...");
-			eve.getRegistry().register(SoupItem.TestSoup());
+			eve.getRegistry().register(SoupItems.TestSoup);
 
-			eve.getRegistry().register(SoupItem.BoneBroth());
-			eve.getRegistry().register(SoupItem.VegeBroth());
+			eve.getRegistry().register(SoupItems.BoneBroth);
+			eve.getRegistry().register(SoupItems.VegeBroth);
 
-			eve.getRegistry().register(SoupItem.CarrotCream());
-			eve.getRegistry().register(SoupItem.Pottage());
-			eve.getRegistry().register(SoupItem.Consomme());
-			eve.getRegistry().register(SoupItem.SimpleStew());
-			eve.getRegistry().register(SoupItem.Borscht());
+			eve.getRegistry().register(SoupItems.CarrotCream);
+			eve.getRegistry().register(SoupItems.Pottage);
+			eve.getRegistry().register(SoupItems.Consomme);
+			eve.getRegistry().register(SoupItems.SimpleStew);
+			eve.getRegistry().register(SoupItems.Borscht);
 
-			eve.getRegistry().register(SoupItem.DeluxeBorscht());
-			eve.getRegistry().register(SoupItem.SpookyBorscht());
-			eve.getRegistry().register(SoupItem.RichStew());
-			eve.getRegistry().register(SoupItem.LuckyStew());
-			eve.getRegistry().register(SoupItem.DelicateConsomme());
-			eve.getRegistry().register(SoupItem.ExoticConsomme());
-			eve.getRegistry().register(SoupItem.Chottage());
-			eve.getRegistry().register(SoupItem.FancyPottage());
-			eve.getRegistry().register(SoupItem.HoneyCream());
-			eve.getRegistry().register(SoupItem.FishChowder());
+			eve.getRegistry().register(SoupItems.DeluxeBorscht);
+			eve.getRegistry().register(SoupItems.SpookyBorscht);
+			eve.getRegistry().register(SoupItems.RichStew);
+			eve.getRegistry().register(SoupItems.LuckyStew);
+			eve.getRegistry().register(SoupItems.DelicateConsomme);
+			eve.getRegistry().register(SoupItems.ExoticConsomme);
+			eve.getRegistry().register(SoupItems.Chottage);
+			eve.getRegistry().register(SoupItems.FancyPottage);
+			eve.getRegistry().register(SoupItems.HoneyCream);
+			eve.getRegistry().register(SoupItems.FishChowder);
+			eve.getRegistry().register(SoupItems.DolphinTail);
 		}
 
 		@SubscribeEvent
@@ -162,6 +132,7 @@ public class SoupDeluxe
 			eve.getRegistry().register(new SilkTouchModifier.Serializer().setRegistryName("loot_silk_soup"));
 			eve.getRegistry().register(new SoupFortuneModifier.Serializer().setRegistryName("loot_soup_fortune"));
 			eve.getRegistry().register(new SoupLootingModifier.Serializer().setRegistryName("loot_soup_looting"));
+			eve.getRegistry().register(new DolphinTailModifier.Serializer().setRegistryName("loot_dolphin_tail"));
 		}
 	}
 }
