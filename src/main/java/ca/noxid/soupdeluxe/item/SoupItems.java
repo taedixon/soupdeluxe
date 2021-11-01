@@ -22,8 +22,8 @@ public class SoupItems {
 			new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1f)
+					.nutrition(8)
+					.saturationMod(0.75f)
 					.effect(new SoupEffectProvider(SoupEffects.DOLPHIN_SOUP),1f)
 					.build())
 			.stacksTo(16)).setRegistryName("dolphin_soup");
@@ -33,7 +33,7 @@ public class SoupItems {
 			.stacksTo(64)
 			.food(new Food.Builder()
 					.nutrition(2)
-					.saturationMod(1f)
+					.saturationMod(0.5f)
 					.build()
 			)).setRegistryName("bone_broth");
 
@@ -42,7 +42,7 @@ public class SoupItems {
 			.stacksTo(64)
 			.food(new Food.Builder()
 					.nutrition(2)
-					.saturationMod(1f)
+					.saturationMod(0.5f)
 					.build()
 			)).setRegistryName("veg_broth");
 
@@ -50,8 +50,8 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1f)
+					.nutrition(6)
+					.saturationMod(0.75f)
 					.build()
 			)).setRegistryName("cream_soup");
 
@@ -59,7 +59,7 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
+					.nutrition(6)
 					.saturationMod(1f)
 					.build()
 			)).setRegistryName("pottage");
@@ -69,7 +69,7 @@ public class SoupItems {
 			.stacksTo(64)
 			.food(new Food.Builder()
 					.nutrition(4)
-					.saturationMod(1f)
+					.saturationMod(0.75f)
 					.build()
 			)).setRegistryName("consomme");
 
@@ -77,8 +77,8 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1f)
+					.nutrition(8)
+					.saturationMod(0.75f)
 					.build()
 			)).setRegistryName("simple_stew");
 
@@ -86,8 +86,8 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1f)
+					.nutrition(6)
+					.saturationMod(0.75f)
 					.build()
 			)).setRegistryName("borscht");
 
@@ -95,8 +95,8 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1.5f)
+					.nutrition(8)
+					.saturationMod(1f)
 					.effect(new SoupEffectProvider(Effects.DIG_SPEED), 1f)
 					.build()
 			)).setRegistryName("deluxe_borscht");
@@ -105,8 +105,8 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1.5f)
+					.nutrition(8)
+					.saturationMod(1f)
 					.effect(new SoupEffectProvider(Effects.GLOWING), 1f)
 					.effect(new SoupEffectProvider(Effects.NIGHT_VISION), 1f)
 					.build()
@@ -116,7 +116,7 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(8)
+					.nutrition(12)
 					.saturationMod(1.5f)
 					.build()
 			)).setRegistryName("rich_stew");
@@ -125,8 +125,8 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1.5f)
+					.nutrition(8)
+					.saturationMod(1f)
 					.effect(new SoupEffectProvider(SoupEffects.LUCKY_SOUP), 1f)
 					.build()
 			)).setRegistryName("lucky_stew");
@@ -135,8 +135,8 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1.5f)
+					.nutrition(8)
+					.saturationMod(0.75f)
 					.effect(new SoupEffectProvider(SoupEffects.SILK_TOUCH), 1f)
 					.effect(new SoupEffectProvider(Effects.WEAKNESS), 1f)
 					.build()
@@ -146,8 +146,8 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1.5f)
+					.nutrition(8)
+					.saturationMod(0.75f)
 					.effect(new SoupEffectProvider(Effects.FIRE_RESISTANCE), 1f)
 					.build()
 			)).setRegistryName("exotic_consomme");
@@ -156,7 +156,7 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
+					.nutrition(8)
 					.saturationMod(1.5f)
 					.effect(new SoupEffectProvider(Effects.JUMP), 1f)
 					.effect(new SoupEffectProvider(Effects.SLOW_FALLING), 1f)
@@ -167,7 +167,7 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
+					.nutrition(8)
 					.saturationMod(1.5f)
 					.effect(new SoupEffectProvider(Effects.MOVEMENT_SPEED), 1f)
 					.build()
@@ -177,8 +177,8 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1.5f)
+					.nutrition(6)
+					.saturationMod(2f)
 					.build()
 			)).setRegistryName("honey_cream");
 
@@ -186,8 +186,8 @@ public class SoupItems {
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
-					.nutrition(4)
-					.saturationMod(1.5f)
+					.nutrition(8)
+					.saturationMod(1f)
 					.effect(new SoupEffectProvider(SoupEffects.SEA_SOUP), 1f)
 					.build()
 			)).setRegistryName("fish_chowder");
