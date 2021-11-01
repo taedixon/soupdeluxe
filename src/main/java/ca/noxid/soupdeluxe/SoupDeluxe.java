@@ -1,6 +1,7 @@
 package ca.noxid.soupdeluxe;
 
 import ca.noxid.soupdeluxe.effect.SoupEffects;
+import ca.noxid.soupdeluxe.item.SoupItem;
 import ca.noxid.soupdeluxe.loot.DolphinTailModifier;
 import ca.noxid.soupdeluxe.loot.SoupFortuneModifier;
 import ca.noxid.soupdeluxe.loot.SilkTouchModifier;
@@ -8,11 +9,18 @@ import ca.noxid.soupdeluxe.item.SoupItems;
 import ca.noxid.soupdeluxe.loot.SoupLootingModifier;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Effect;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.text.TextFormatting;
+import net.minecraft.util.text.TranslationTextComponent;
+import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.common.loot.GlobalLootModifierSerializer;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.event.entity.player.ItemTooltipEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.InterModComms;
 import net.minecraftforge.fml.common.Mod;
@@ -79,6 +87,18 @@ public class SoupDeluxe
 	public void onServerStarting(FMLServerStartingEvent event) {
 		// do something when the server starts
 		LOGGER.info("HELLO from server starting");
+	}
+
+	@Mod.EventBusSubscriber(modid="soupdeluxe", bus= Mod.EventBusSubscriber.Bus.FORGE, value = Dist.CLIENT)
+	public static class ForgeEventRegistry {
+		@SubscribeEvent
+		public static void onGetTooltipDetail(ItemTooltipEvent eve) {
+			ItemStack stack = eve.getItemStack();
+			if (stack.getItem() instanceof SoupItem) {
+				SoupItem soup = (SoupItem) stack.getItem();
+				soup.setTooltip(eve.getToolTip());
+			}
+		}
 	}
 
 	// You can use EventBusSubscriber to automatically subscribe events on the contained class (this is subscribing to the MOD

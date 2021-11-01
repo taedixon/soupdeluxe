@@ -13,12 +13,12 @@ import java.util.function.Supplier;
 public class SoupItems {
 	public static Item TestSoup = new TestSoup();
 
-	public static Item DolphinTail = new Item(
+	public static Item DolphinTail = new SoupItem(
 			new Item.Properties()
 			.tab(ItemGroup.TAB_MISC)
 			.stacksTo(64)).setRegistryName("dolphin_tail");
 
-	public static Item DolphinSoup = new Item(
+	public static Item DolphinSoup = new SoupItem(
 			new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.food(new Food.Builder()
@@ -28,7 +28,7 @@ public class SoupItems {
 					.build())
 			.stacksTo(16)).setRegistryName("dolphin_soup");
 
-	public static Item BoneBroth = new Item(new Item.Properties()
+	public static Item BoneBroth = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -37,7 +37,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("bone_broth");
 
-	public static Item VegeBroth = new Item(new Item.Properties()
+	public static Item VegeBroth = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -46,7 +46,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("veg_broth");
 
-	public static Item CarrotCream = new Item(new Item.Properties()
+	public static Item CarrotCream = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -55,7 +55,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("cream_soup");
 
-	public static Item Pottage = new Item(new Item.Properties()
+	public static Item Pottage = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -64,7 +64,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("pottage");
 
-	public static Item Consomme = new Item(new Item.Properties()
+	public static Item Consomme = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -73,7 +73,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("consomme");
 
-	public static Item SimpleStew = new Item(new Item.Properties()
+	public static Item SimpleStew = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -82,7 +82,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("simple_stew");
 
-	public static Item Borscht = new Item(new Item.Properties()
+	public static Item Borscht = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -91,7 +91,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("borscht");
 
-	public static Item DeluxeBorscht = new Item(new Item.Properties()
+	public static Item DeluxeBorscht = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -101,7 +101,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("deluxe_borscht");
 
-	public static Item SpookyBorscht = new Item(new Item.Properties()
+	public static Item SpookyBorscht = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -112,7 +112,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("spooky_borscht");
 
-	public static Item RichStew = new Item(new Item.Properties()
+	public static Item RichStew = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -121,7 +121,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("rich_stew");
 
-	public static Item LuckyStew = new Item(new Item.Properties()
+	public static Item LuckyStew = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -131,7 +131,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("lucky_stew");
 
-	public static Item DelicateConsomme = new Item(new Item.Properties()
+	public static Item DelicateConsomme = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -142,7 +142,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("delicate_consomme");
 
-	public static Item ExoticConsomme = new Item(new Item.Properties()
+	public static Item ExoticConsomme = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -152,7 +152,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("exotic_consomme");
 
-	public static Item Chottage = new Item(new Item.Properties()
+	public static Item Chottage = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -163,7 +163,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("chottage");
 
-	public static Item FancyPottage = new Item(new Item.Properties()
+	public static Item FancyPottage = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -173,7 +173,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("fancy_pottage");
 
-	public static Item HoneyCream = new Item(new Item.Properties()
+	public static Item HoneyCream = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()
@@ -182,7 +182,7 @@ public class SoupItems {
 					.build()
 			)).setRegistryName("honey_cream");
 
-	public static Item FishChowder = new Item(new Item.Properties()
+	public static Item FishChowder = new SoupItem(new Item.Properties()
 			.tab(ItemGroup.TAB_FOOD)
 			.stacksTo(64)
 			.food(new Food.Builder()

@@ -1,4 +1,7 @@
 {
+  "soupdeluxe.tooltip.holdfordetail": "Hold [%1$s] for details",
+  "soupdeluxe.tooltip.keyshift": "Shift",
+
   "item.soupdeluxe.bone_broth": "Bone Broth",
   "item.soupdeluxe.borscht": "Borscht",
   "item.soupdeluxe.consomme": "Consommé",
@@ -6,21 +9,47 @@
   "item.soupdeluxe.pottage": "Pottage",
   "item.soupdeluxe.simple_stew": "Simple Stew",
   "item.soupdeluxe.test_soup": "Test Soup",
+  "item.soupdeluxe.test_soup.tooltip": "dont this",
   "item.soupdeluxe.veg_broth": "Veggie Broth",
   "item.soupdeluxe.honey_cream": "Honeyed Cream of Carrot",
+
   "item.soupdeluxe.fish_chowder": "Seafood Chowder",
+  "item.soupdeluxe.fish_chowder.tooltip": "Fish Breath (4:00)",
+  "item.soupdeluxe.fish_chowder.tooltip.shift": "Swimming Boost\n+ more underwater breath.",
+
   "item.soupdeluxe.chottage": "Chottage",
+  "item.soupdeluxe.chottage.tooltip": "Jump Boost (4:00)\nSlow Falling (4:00)",
+
   "item.soupdeluxe.fancy_pottage": "Fancy Pottage",
+  "item.soupdeluxe.fancy_pottage.tooltip": "Speed (4:00)",
+
   "item.soupdeluxe.delicate_consomme": "Delicate Consomme",
+  "item.soupdeluxe.delicate_consomme.tooltip": "Soft Hands (4:00)\nWeakness (4:00)",
+  "item.soupdeluxe.delicate_consomme.tooltip.shift": "Tools behave as if they had\nthe Silk Touch enchantment.",
+
   "item.soupdeluxe.exotic_consomme": "Exotic Consomme",
+  "item.soupdeluxe.exotic_consomme.tooltip": "Fire Resistance (4:00)",
+
   "item.soupdeluxe.rich_stew": "Rich Stew",
+
   "item.soupdeluxe.lucky_stew": "Lucky Stew",
+  "item.soupdeluxe.lucky_stew.tooltip": "Fortunate (4:00)",
+  "item.soupdeluxe.lucky_stew.tooltip.shift": "Gives you the power of the\nFortune I and Looting I enchantments.",
+
   "item.soupdeluxe.deluxe_borscht": "Deluxe Borscht",
+  "item.soupdeluxe.deluxe_borscht.tooltip": "Haste (4:00)",
+
   "item.soupdeluxe.spooky_borscht": "Spooky Borscht",
+  "item.soupdeluxe.spooky_borscht.tooltip": "Glowing (4:00)\nNight Vision (4:00)",
+
   "item.soupdeluxe.dolphin_tail": "Pristine Dolphin Tail",
+
   "item.soupdeluxe.dolphin_soup": "Dolphin Soup",
+  "item.soupdeluxe.dolphin_soup.tooltip": "Ocean's Terror (4:00)",
+  "item.soupdeluxe.dolphin_soup.tooltip.shift": "Swim *really* fast.\nExtra breath underwater.",
 
   "effect.soupdeluxe.effect_sea_soup": "Fish Breath",
   "effect.soupdeluxe.effect_lucky_soup": "Fortunate",
-  "effect.soupdeluxe.effect_silk_touch": "Soft Hands"
+  "effect.soupdeluxe.effect_silk_touch": "Soft Hands",
+  "effect.soupdeluxe.effect_dolphin_soup": "Ocean's Terror"
 }
